@@ -1,0 +1,3 @@
+create database camp_registration
+with
+owner postgres

@@ -1,0 +1,11 @@
+services:
+    camp-registration-database:
+        container_name: camp-registration-database
+        build:
+            dockerfile: Dockerfile.database
+            context: .
+        environment:
+            - POSTGRES_PASSWORD=1234567890
+            - POSTGRES_USER=postgres
+        ports:
+            - 15432:5432
