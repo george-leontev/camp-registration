@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: camp-registration
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+
+  datasource:
+    url: jdbc:postgresql://localhost:15432/camp_registration
+    username: postgres
+    password: 1234567890
+    driver-class-name: org.postgresql.Driver
+

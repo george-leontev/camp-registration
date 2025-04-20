@@ -7,6 +7,7 @@ import org.church.camp_registration.model.Camp;
 import org.church.camp_registration.repository.CampRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,7 +25,7 @@ public class CampController {
     }
 
     @GetMapping("/{id}")
-    public Camp get(int id) {
+    public Camp get(@PathVariable int id) {
         var camp = campRepository
             .findById(id)
             .orElseThrow(
