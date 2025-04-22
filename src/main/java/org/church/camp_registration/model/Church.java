@@ -10,6 +10,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Builder
 public class Church {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

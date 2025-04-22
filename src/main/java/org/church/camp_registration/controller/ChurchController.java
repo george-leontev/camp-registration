@@ -3,34 +3,36 @@ package org.church.camp_registration.controller;
 import java.util.List;
 
 import org.church.camp_registration.exception.ResourceNotFoundException;
-import org.church.camp_registration.model.Camp;
-import org.church.camp_registration.repository.CampRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.church.camp_registration.model.Church;
+import org.church.camp_registration.repository.ChurchRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController()
-@RequestMapping("/api/camps")
-public class CampController {
-    @Autowired()
-    private CampRepository campRepository;
+@RestController
+@RequestMapping("/api/churches")
+public class ChurchController {
+    private final ChurchRepository churchRepository;
+
+    public ChurchController(ChurchRepository churchRepository) {
+        this.churchRepository = churchRepository;
+    }
 
     @GetMapping()
-    public List<Camp> getAll() {
-        var camps = campRepository.findAll();
+    public List<Church> getAll() {
+        var churches = churchRepository.findAll();
 
-        return camps;
+        return churches;
     }
 
     @GetMapping("/{id}")
-    public Camp get(@PathVariable int id) {
-        var camp = campRepository
+    public Church get(@PathVariable int id) {
+        var church = churchRepository
                 .findById(id)
                 .orElseThrow(
                         () -> new ResourceNotFoundException("The camp was not found."));
 
-        return camp;
+        return church;
     }
 }
