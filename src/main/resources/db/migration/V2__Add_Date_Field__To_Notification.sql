@@ -1,0 +1,2 @@
+ALTER TABLE notification
+    ADD date TIMESTAMP WITHOUT TIME ZONE;

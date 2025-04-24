@@ -5,7 +5,6 @@ import java.util.List;
 import org.church.camp_registration.exception.ResourceNotFoundException;
 import org.church.camp_registration.model.Camp;
 import org.church.camp_registration.repository.CampRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,8 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController()
 @RequestMapping("/api/camps")
 public class CampController {
-    @Autowired()
-    private CampRepository campRepository;
+    private final CampRepository campRepository;
+
+    public CampController(CampRepository campRepository) {
+        this.campRepository = campRepository;
+    }
 
     @GetMapping()
     public List<Camp> getAll() {
