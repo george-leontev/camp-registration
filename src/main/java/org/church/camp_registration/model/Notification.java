@@ -22,10 +22,10 @@ public class Notification {
     @Column(length = 32)
     private String telegramId;
 
-    @Column(length = 64)
+    @Column(length = 128)
     private String title;
 
-    @Column(length = 64)
+    @Column(length = 256)
     private String content;
 
     @CreationTimestamp
@@ -37,7 +37,6 @@ public class Notification {
     @Column(name = "is_deleted")
     private boolean isDeleted;
 
-
-    @Column(length = 32)
+    @Column(length = 16)
     private String icon;
 }

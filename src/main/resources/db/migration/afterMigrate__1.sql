@@ -1,3 +1,5 @@
+TRUNCATE TABLE business.church;
+
 INSERT INTO business.church (id, name) OVERRIDING SYSTEM VALUE VALUES (1, 'New Life');
 INSERT INTO business.church (id, name) OVERRIDING SYSTEM VALUE VALUES (2, 'Word Of Truth');
 
