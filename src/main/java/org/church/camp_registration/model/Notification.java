@@ -31,9 +31,13 @@ public class Notification {
     @CreationTimestamp
     private LocalDateTime date;
 
-//    isRead     Boolean  @default(false)
-//    isDeleted  Boolean  @default(false)
-//    icon       String
-//    @@map("notification")
-//    @@schema("business")
+    @Column(name = "is_read")
+    private boolean isRead;
+
+    @Column(name = "is_deleted")
+    private boolean isDeleted;
+
+
+    @Column(length = 32)
+    private String icon;
 }

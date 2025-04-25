@@ -3,8 +3,6 @@ spring:
     name: camp-registration
   jpa:
     database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-
     properties:
       hibernate:
         jdbc:
@@ -22,3 +20,5 @@ spring:
     url: jdbc:postgresql://localhost:15432/camp_registration
     user: postgres
     password: 1234567890
+    clean-disabled: false
+    schemas: public, business

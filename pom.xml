@@ -115,6 +115,8 @@
                     <url>jdbc:postgresql://localhost:15432/camp_registration</url>
                     <user>postgres</user>
                     <password>1234567890</password>
+                    <cleanDisabled>false</cleanDisabled>
+                    <schemas>public,business</schemas>
                 </configuration>
             </plugin>
 
