@@ -1,6 +1,6 @@
 package org.church.camp_registration.config;
 
-import org.church.camp_registration.repository.ChurchRepository;
+import org.church.camp_registration.repository.churches.ChurchRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

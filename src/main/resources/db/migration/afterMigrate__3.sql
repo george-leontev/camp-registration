@@ -1,31 +1,10 @@
-TRUNCATE TABLE business.notification;
+TRUNCATE TABLE business.camp CASCADE;
+ALTER SEQUENCE business.camp_id_seq RESTART WITH 1;
 
-INSERT INTO business.notification (telegram_id, title, content, date, icon, is_deleted, is_read)
-VALUES ('7654566754',
-        'Ваша регистрация аннулирована',
-        'Ваша регистрация на лагеря была автоматически отменена, так как мы не получили оплату в течение 7 дней',
-        '2025-02-25 20:00:00',
-        '⚠️',
-        false,
-        false
-        );
+INSERT INTO business.camp (id, name, seats, start_date, end_date)
+VALUES (1, 'Детский', 100, '2025-06-30 00:00:00.000', '2025-07-05 00:00:00.000'),
+       (2, 'Подростковый', 100, '2025-07-07 00:00:00.000', '2025-07-12 00:00:00.000'),
+       (3, 'Мужской', 130, '2025-07-14 00:00:00.000', '2025-07-15 00:00:00.000'),
+       (4, 'Молодежный', 130, '2025-07-21 00:00:00.000', '2025-07-26 00:00:00.000'),
+       (5, 'Общецерковный', 130, '2025-07-17 00:00:00.000', '2025-07-20 00:00:00.000');
 
-INSERT INTO business.notification (telegram_id, title, content, date, icon, is_deleted, is_read)
-VALUES ('5465462436',
-        'Ваша регистрация аннулирована',
-        'Ваша регистрация на лагеря была автоматически отменена, так как мы не получили оплату в течение 7 дней',
-        '2025-03-25 20:00:00',
-        '⚠️',
-        true,
-        false
-       );
-
-INSERT INTO business.notification (telegram_id, title, content, date, icon, is_deleted, is_read)
-VALUES ('345665412',
-        'Ваша регистрация аннулирована',
-        'Ваша регистрация на лагеря была автоматически отменена, так как мы не получили оплату в течение 7 дней',
-        '2025-04-25 20:00:00',
-        '⚠️',
-        false,
-        false
-       );

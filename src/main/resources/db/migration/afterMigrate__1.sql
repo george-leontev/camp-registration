@@ -1,7 +1,8 @@
-TRUNCATE TABLE business.church;
+TRUNCATE TABLE business.church CASCADE;
+ALTER SEQUENCE business.church_id_seq RESTART WITH 1;
 
-INSERT INTO business.church (id, name) OVERRIDING SYSTEM VALUE VALUES (1, 'New Life');
-INSERT INTO business.church (id, name) OVERRIDING SYSTEM VALUE VALUES (2, 'Word Of Truth');
-
--- Update sequence to avoid conflicts
-ALTER SEQUENCE business.church_id_seq RESTART WITH 3;
+INSERT INTO business.church (name) VALUES ('Новая жизнь');
+INSERT INTO business.church (name) VALUES ('Слово Истины');
+INSERT INTO business.church (name) VALUES ('Примирение');
+INSERT INTO business.church (name) VALUES ('Свет Евангелия');
+INSERT INTO business.church (name) VALUES ('Другая');

@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.church.camp_registration.exception.ResourceNotFoundException;
 import org.church.camp_registration.model.Church;
-import org.church.camp_registration.repository.ChurchRepository;
+import org.church.camp_registration.repository.churches.ChurchRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

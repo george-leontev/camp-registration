@@ -1,5 +1,6 @@
 package org.church.camp_registration.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,6 +15,7 @@ import lombok.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(hidden = true)
     private int id;
 
     @Column(name = "user_name")

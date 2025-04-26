@@ -1,4 +1,4 @@
-package org.church.camp_registration.repository;
+package org.church.camp_registration.repository.notifications;
 
 import org.church.camp_registration.model.Notification;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface NotificationRepository extends JpaRepository<Notification, Integer> {
+public interface NotificationRepository extends JpaRepository<Notification, Integer>, NotificationCustomRepository {
     @Query("""
                     from Notification as n
                     where n.telegramId = :telegramId and  n.isDeleted = false
