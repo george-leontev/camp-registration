@@ -1,1 +1,2 @@
 DROP SCHEMA IF EXISTS business;
+DROP SCHEMA IF EXISTS dictionaries;

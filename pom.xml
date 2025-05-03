@@ -116,7 +116,7 @@
                     <user>postgres</user>
                     <password>1234567890</password>
                     <cleanDisabled>false</cleanDisabled>
-                    <schemas>public,business</schemas>
+                    <schemas>public,business,dictionaries</schemas>
                 </configuration>
             </plugin>
 

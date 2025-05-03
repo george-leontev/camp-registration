@@ -3,10 +3,13 @@ spring:
     name: camp-registration
   jpa:
     database: postgresql
+    show-sql: true
     properties:
       hibernate:
         jdbc:
           time_zone: UTC
+        format_sql: true
+        use_sql_comments: true
 
 
   datasource:
@@ -21,4 +24,4 @@ spring:
     user: postgres
     password: 1234567890
     clean-disabled: false
-    schemas: public, business
+    schemas: public, business, dictionaries

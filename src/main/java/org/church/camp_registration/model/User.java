@@ -21,18 +21,18 @@ public class User {
     @Column(name = "user_name")
     private String userName;
 
-    @Column(name = "first_name")
+    @Column(name = "first_name", nullable = false)
     private String firstName;
 
-    @Column(name = "last_name")
+    @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    @Column()
+    @Column(nullable = false)
     private String phone;
 
-    @Column(name = "photo_url")
+    @Column(name = "photo_url", nullable = false)
     private String photoUrl;
 
-    @Column(name = "telegram_id", unique = true)
+    @Column(name = "telegram_id", unique = true, nullable = false)
     private String telegramId;
 }

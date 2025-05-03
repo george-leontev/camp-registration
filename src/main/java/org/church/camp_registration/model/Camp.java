@@ -19,16 +19,16 @@ public class Camp {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(length = 32)
+    @Column(length = 32, nullable = false)
     private String name;
 
-    @Column(name = "seats")
+    @Column(name = "seats", nullable = false)
     private int seats;
     
-    @Column(name = "start_date")
+    @Column(name = "start_date", nullable = false)
     private LocalDateTime startDate;
 
-    @Column(name = "end_date")
+    @Column(name = "end_date", nullable = false)
     private LocalDateTime endDate;
 
     @OneToMany(mappedBy = "camp", cascade = CascadeType.ALL)

@@ -19,24 +19,25 @@ public class Notification {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(length = 32)
+    @Column(length = 32, nullable = false)
     private String telegramId;
 
-    @Column(length = 128)
+    @Column(length = 128, nullable = false)
     private String title;
 
-    @Column(length = 256)
+    @Column(length = 256, nullable = false)
     private String content;
 
     @CreationTimestamp
+    @Column(nullable = false)
     private LocalDateTime date;
 
-    @Column(name = "is_read")
+    @Column(name = "is_read", nullable = false)
     private boolean isRead;
 
-    @Column(name = "is_deleted")
+    @Column(name = "is_deleted", nullable = false)
     private boolean isDeleted;
 
-    @Column(length = 16)
+    @Column(length = 16, nullable = false)
     private String icon;
 }
